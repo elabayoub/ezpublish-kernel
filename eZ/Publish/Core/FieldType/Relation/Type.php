@@ -214,7 +214,9 @@ class Type extends FieldType
      */
     public function fromHash( $hash )
     {
-        return new Value( $hash['destinationContentId'] );
+        if($hash){
+            return new Value( $hash['destinationContentId'] );
+        }
     }
 
     /**
